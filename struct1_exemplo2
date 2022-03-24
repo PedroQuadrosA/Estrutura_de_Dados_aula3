@@ -1,0 +1,35 @@
+/*
+
+EXEMPLO 2
+
+*/
+
+#include <stdio.h>
+
+struct veiculo{
+  int  ano;
+  int  potencia;
+};
+
+int main(){
+
+  int i;
+  
+  struct veiculo vei[3];
+  
+  for( i = 0; i < n; i++){
+  	
+    printf("Ano: ");
+    scanf("%d", &vei[i].ano);
+    printf("Potencia: ");
+    scanf("%d", &vei[i].potencia);
+    
+  }
+  
+  for(i = 0; i < n; i++){
+  	
+		printf("\nAno: %d | potencia: %d\n", vei[i].ano ,vei[i].potencia);
+   
+  }
+  
+}
