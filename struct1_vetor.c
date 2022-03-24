@@ -11,24 +11,27 @@ int main(){
 
   
   //struct pessoa pessoa2;
-  int n;
+  int n, i;
 
   printf("Digite a quantidade de pessoas que deseja cadastrar no sistema: ");
   scanf("%d", &n);
   struct pessoa pessoa[n];
   
-  for( int i = 0; i < n; i++){
+  for(i = 0; i < n; i++){
     printf("Nome: ");
     getchar();
-    scanf("%[^\n]", pessoa[n].nome); //é uma maneira de travar o cursor parar para receber string
+    scanf("%[^\n]", pessoa[i].nome); 
     printf("Peso: ");
-    scanf("%f", &pessoa[n].peso);
+    scanf("%f", &pessoa[i].peso);
     printf("Altura: ");
-    scanf("%lf", &pessoa[n].altura);
+    scanf("%lf", &pessoa[i].altura);
     printf("CPF: ");
-    scanf("%d", &pessoa[n].cpf);
-    
-  
-   printf("\nNome: %s | Peso: %f | Altura: %lf | CPF: %d\n", pessoa[n].nome, pessoa[n].peso, pessoa[n].altura, pessoa[n].cpf);
+    scanf("%d", &pessoa[i].cpf);
   }
+  
+  for(i = 0; i < n; i++){
+	printf("\nNome: %s | Peso: %f | Altura: %lf | CPF: %d\n", pessoa[i].nome, pessoa[i].peso, pessoa[i].altura, pessoa[i].cpf);
+  }
+  
+  return 0;
 }
